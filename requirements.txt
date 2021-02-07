@@ -1,7 +1,6 @@
 appdirs==1.4.4
 asgiref==3.2.10
 attrs==19.3.0
-btrfsutil==1.2.0
 CacheControl==0.12.6
 cffi==1.14.0
 chardet==3.0.4
