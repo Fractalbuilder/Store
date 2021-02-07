@@ -26,7 +26,7 @@ SECRET_KEY = 'npm*49nzb3j-9z)$zb0szawp=lf1f4(wc3nr##7uxjkv@yro2$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'store-project00.herokuapp.com', '127.0.0.1' ]
 
 
 # Application definition
