@@ -53,15 +53,26 @@
             <div class="col-md-4 col-lg-4 bordered-section">
                 <h3 class="title">Comments</h3>
                 <br>
-                <div class="form-group2">
+		<div class="form-group2">
                     <form action='add_comment/{{ product.id }}' method="post">
                         {% csrf_token %}
                         {{ commentForm.comment }}
+                        <br>
 
+                        {% if user.is_authenticated %}
                         <input class="common-button vertically-spaced" type=submit value="Save">
+                        {% else %}
+                        <button class="common-button vertically-spaced" onclick="showWarning('commentInput', 'Please, log in.', 'failure')">Save</butto
+n>
+                        <div><br></div>
+                        <p id="commentInput"></p>
+                        {% endif %}
                     </form>
                 </div>
-                
+
+                {% if comments %}
+                <hr>
+                {% endif %}
                 {% for comment in comments %}
                     <p><b>{{ comment.user }}:</b> {{ comment.comment }}</p>
                 {% endfor %}
